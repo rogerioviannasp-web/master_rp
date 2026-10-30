@@ -101,8 +101,9 @@ if submit_button:
                             erro_msg = res_json.get("message", "Erro desconhecido")
                             st.error(f"❌ **Cadastro não efetuado:** {erro_msg}")
                     except json.JSONDecodeError:
-                        # Fallback caso o Apps Script retorne HTML de sucesso do Google
                         st.success("🎉 **Cadastro efetuado com sucesso!**")
+                elif response.status_code == 401:
+                    st.error("❌ **Cadastro não efetuado:** Erro 401 (Acesso Negado). Certifique-se de que o Apps Script está configurado com acesso para 'Qualquer pessoa'.")
                 else:
                     st.error(f"❌ **Cadastro não efetuado:** Falha na conexão (Status HTTP: {response.status_code})")
                     
