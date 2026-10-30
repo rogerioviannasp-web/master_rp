@@ -1,1 +1,9 @@
+[theme]
+primaryColor = "#2563EB"          # Azul Corporativo / TailWind Blue 600
+backgroundColor = "#F8FAFC"       # Fundo levemente acinzentado (Clean Slate)
+secondaryBackgroundColor = "#FFFFFF"# Containers e formulários brancos
+textColor = "#0F172A"             # Texto contrastante (Slate 900)
+font = "sans serif"
 
+[client]
+showErrorDetails = false
